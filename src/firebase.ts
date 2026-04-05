@@ -1,17 +1,18 @@
 import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  //   // COPY this from your Firebase Console
-  //   apiKey: "your-api-key-goes-here",
-  //   authDomain: "your-project-name-here.firebaseapp.com",
-  //   databaseURL: "https://your-project-name-here.firebaseio.com",
-  //   projectId: "your-project-name-here",
-  //   storageBucket: "your-project-name.appspot.com",
-  //   messagingSenderId: "xxxxxxxx",
+  apiKey: "AIzaSyB6fIpusx6zQjI2k0vdnmQSUiAuy1D3Ftc",
+  authDomain: "beverageshop-e16b7.firebaseapp.com",
+  projectId: "beverageshop-e16b7",
+  storageBucket: "beverageshop-e16b7.firebasestorage.app",
+  messagingSenderId: "98936489052",
+  appId: "1:98936489052:web:b8b2358244a209408cd299"
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
-export default db;
+
+export const db = getFirestore(app);
+export const auth = getAuth(app);
